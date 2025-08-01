@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  background-color: #101010;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.footer>div {
+  flex: 1;
+  min-width: 200px;
+  border: 1px solid red;
+  text-align: center;
+}
+
+.footer .linksfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 10px 0;
+}
+
+.copy {
+  width: 100%;
+  text-align: center;
+  background-color: rgb(230, 226, 226);
+}

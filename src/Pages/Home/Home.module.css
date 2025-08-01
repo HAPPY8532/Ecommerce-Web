@@ -1,0 +1,238 @@
+.main {
+  width: 100%;
+  height: auto;
+  margin-top: 10vh;
+  padding-bottom: 5rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-areas:
+    "left center rightup"
+    "left center rightdown"
+    "bottom bottom bottom";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 200px 200px 80px;
+  gap: 10px;
+  padding-top: 6px;
+}
+
+/* ✅ Updated .left with scroll and hidden scrollbar */
+.left {
+
+  grid-area: left;
+  background: #f2f2f2;
+  box-shadow: 0px 0px 10px 5px rgb(20, 20, 20);
+  border-radius: 3px;
+  max-height: calc(200px + 200px); /* or 570px */
+  overflow-y: hidden; /* ❌ Hide by default */
+  padding: 5px;
+  position: relative;
+  border: 1px solid black;
+}
+
+/* ✅ On hover, enable scroll */
+.left:hover {
+  overflow-y: auto;
+}
+
+/* ✅ Hide scrollbar normally for WebKit (Chrome, Safari) */
+.left::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* ✅ Hide scrollbar unless hovering */
+.left:not(:hover)::-webkit-scrollbar {
+  display: none;
+}
+
+/* ✅ Optional: style the scrollbar when visible */
+.left::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 4px;
+}
+
+
+.left h3 {
+  text-align: center;
+  background-color: rgb(243, 92, 117);
+  padding: 10px;
+  border-radius: 3px;
+  color: white;
+}
+
+.left p {
+  padding: 8px 10px;
+  margin: 0;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+  text-transform: capitalize;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.left p:hover {
+  font-size: large;
+  color: orangered;
+  background-color: #d0f0c0;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+.center {
+  grid-area: center;
+  background: #d0f0c0;
+  background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/b1.jpg");
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 5px rgb(49, 199, 106);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  overflow: hidden;
+}
+
+
+.center .content h1{
+ font-family: cursive;
+ color: green;
+ text-align: center;
+ text-transform: capitalize;
+}
+.content p{
+  text-align: center;
+  text-transform: capitalize;
+  font-family: cursive;
+}
+.content button{
+  margin: 10rem 0 0 2rem;
+  padding: .4rem 1rem;
+  border-radius: 10px;
+  border: none;
+  background-color: orangered;
+  font-size: 1rem;
+  font-weight: 700;
+  color: white;
+  text-transform: capitalize;
+}
+.center button:hover{
+  transform: scale(1.1) ;
+}
+
+
+.rcontent{
+  margin: 0 auto;
+  width: 70%;
+  text-align: center;
+  height: 100%;
+}
+
+.rightup {
+  grid-area: rightup;
+  background: #fdd;
+  background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/OIP.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 5px rgb(206, 13, 132);
+  cursor: pointer;
+}
+.rightup:hover{
+  transform: scale(1.1) ;
+}
+.rightdown:hover{
+  transform: scale(1.1) ;
+}
+.rightdown {
+  background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/frag.avif");
+  background-size: 65%;
+  background-position: top;
+  grid-area: rightdown;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 5px rgb(164, 209, 235);
+  cursor: pointer;
+}
+
+.rightup h3{
+  text-align: center;
+  color: rgb(230, 59, 88);
+  text-transform: capitalize;
+}
+.rightup p{
+  width: 100%;
+  color: yellow ;
+  text-shadow: 2px 2px green;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+.rightup button{
+  margin-top: 5rem;
+  padding: 5px;
+  font-weight: 500;
+
+}
+
+
+
+
+.rightdown h3{
+  text-align: center;
+  color: rgb(230, 59, 88);
+  text-transform: capitalize;
+}
+.rightdown   p{
+  width: 100%;
+  color: yellow ;
+  text-shadow: 2px 2px green;
+  text-transform: capitalize;
+  font-weight: 500;
+  text-align: center;
+  margin: 0 auto;
+}
+.rightdown button{
+ margin-top: 4.9rem;
+  padding: 5px;
+  font-weight: 500;
+}
+
+
+
+
+
+
+.bottom {
+  grid-area: bottom;
+  background: #ffd;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px 5px rgb(221, 190, 16);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.bottom .delivery{
+  display: flex;
+  align-items: center;
+  width: 19.2%;
+  justify-content: center;
+  border-right: 1px solid grey;
+}
+.bottom .delivery:last-of-type{
+  border: none;
+}
+.delivery .icon{
+  font-size: 32px;
+  margin: 0 5px;
+  color: rgb(175, 175, 175);
+}
+.dcontent p:first-of-type{
+  font-size:  1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.dcontent p:last-of-type{
+  font-size: .8rem;
+   color: rgb(175, 175, 175);
+  text-transform: capitalize;
+}

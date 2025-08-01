@@ -1,0 +1,29 @@
+.product{
+  width: 100%;
+  margin-top: 10vh;
+  height: 90vh;
+  background-color: red;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.product .card{
+  width: 24%;
+  height: auto;
+  text-align: center;
+  background-color: skyblue;
+  border: 1px solid black;
+  border-radius: 10px;
+
+}
+.card .imgcontainer{
+  width: 200px;
+  height: 200px;
+  margin: 5px auto;
+  background-color: var(--card-bg);
+}
+.imgcontainer img{
+  width: 100%;
+  height: 100%;
+}

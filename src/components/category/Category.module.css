@@ -1,0 +1,26 @@
+/* Categories Styling  */
+.categorysection{
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 3rem 0;
+}
+.categorysection .category{
+  width: 95%;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+.category button{
+  width: 19.2%;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  font-weight: 700;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  text-transform: uppercase;
+}
