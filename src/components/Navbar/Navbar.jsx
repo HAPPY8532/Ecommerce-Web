@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import style from "./Navbar.module.css";
-import { Link, useNavigate } from "react-router-dom";
-import { FaCaretDown } from "react-icons/fa";
+import { Link, NavLink,  } from "react-router-dom";
 import axios from "axios";
 
 function Navbar() {
@@ -16,25 +15,8 @@ function Navbar() {
     setisdown(!isdown);
   };
 
-  const [category, setCategory] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("https://dummyjson.com/products/category-list")
-      .then((res) => {
-        setCategory(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
 
-  const navigate = useNavigate();
-
-  const handleClick = (catname) => {
-    navigate(`../product/${catname}`);
-    setisdown(false);
-  };
 
   return (
     <>
@@ -42,29 +24,32 @@ function Navbar() {
         <div className="container">
           <nav>
             <div>
-              <Link className={`${style.navlink} ${style.logo}`} to="/">
+              <NavLink className={`${style.navlink} ${style.logo}`} to="/">
                 <p>
                   Neo-<span className={style.mart}>Mart</span>
                 </p>
-              </Link>
+              </NavLink>
             </div>
             <div className={style.nav}>
-            <Link className={style.navlink} to="/">
+            <NavLink to="/" end  className={({isActive}) => 
+            isActive ? `${style.navlink} ${style.active}`: style.navlink
+            }>
               Home
-            </Link>
-            <Link className={style.navlink} onClick={open}>
-              Category <FaCaretDown />
-            </Link>
-            <Link className={style.navlink} to="/about">
+            </NavLink>
+          
+            <NavLink to="/about"  className={({isActive}) => 
+            isActive ? `${style.navlink} ${style.active}`: style.navlink }>
               About
-            </Link>
-            <Link className={style.navlink} to="/blog">
+            </NavLink>
+            <NavLink   to="/blog"  className={({isActive}) => 
+            isActive ? `${style.navlink} ${style.active}`: style.navlink}>
               Blog
-            </Link>
+            </NavLink>
 
-            <Link className={style.navlink} to="/contact">
+            <NavLink  to="/contact"  className={({isActive}) => 
+            isActive ? `${style.navlink} ${style.active}`: style.navlink}>
               Contact
-            </Link>
+            </NavLink>
 
             <div className={style.cart}>
               <span>🙎‍♂️</span>
@@ -102,17 +87,6 @@ function Navbar() {
             </div>
           ) : (
             ""
-          )}
-
-          {/* for Category Selector btns */}
-          {isdown && (
-            <div className={style.category}>
-              {category.map((cat, index) => (
-                <button key={index} onClick={() => handleClick(cat)}>
-                  {cat}
-                </button>
-              ))}
-            </div>
           )}
         </div>
       </div>

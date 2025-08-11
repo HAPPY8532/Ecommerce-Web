@@ -7,11 +7,11 @@ function Layout({children}) {
   return (
     <div>
       <Navbar/>
-    <div>
+    <main>
         {
             children
         }
-    </div>
+    </main>
 
       <Footer/>
     </div>

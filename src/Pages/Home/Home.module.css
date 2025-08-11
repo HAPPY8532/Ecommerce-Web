@@ -22,13 +22,12 @@
 
   grid-area: left;
   background: #f2f2f2;
-  box-shadow: 0px 0px 10px 5px rgb(20, 20, 20);
-  border-radius: 3px;
+  box-shadow: 0px 0px 2px  var(--card-border);
+    border-radius: 3px;
   max-height: calc(200px + 200px); /* or 570px */
   overflow-y: hidden; /* ❌ Hide by default */
   padding: 5px;
   position: relative;
-  border: 1px solid black;
 }
 
 /* ✅ On hover, enable scroll */
@@ -48,33 +47,36 @@
 
 /* ✅ Optional: style the scrollbar when visible */
 .left::-webkit-scrollbar-thumb {
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: var(--accent-color);
   border-radius: 4px;
 }
 
 
 .left h3 {
   text-align: center;
-  background-color: rgb(243, 92, 117);
+  background-color: var(--bg-color);
   padding: 10px;
   border-radius: 3px;
-  color: white;
+  color: var(--accent-color);
+  font-weight: 900;
+  border: 1px solid var(--card-border);
 }
 
 .left p {
   padding: 8px 10px;
   margin: 0;
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid var(--card-border);
   cursor: pointer;
   text-transform: capitalize;
   font-weight: 600;
   transition: 0.2s ease;
+  color: var(--navbar-text);
 }
 
 .left p:hover {
   font-size: large;
-  color: orangered;
-  background-color: #d0f0c0;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -84,7 +86,7 @@
   background: #d0f0c0;
   background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/b1.jpg");
   border-radius: 3px;
-  box-shadow: 0px 0px 10px 5px rgb(49, 199, 106);
+  box-shadow: 0px 0px 2px  var(--card-border);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -94,7 +96,7 @@
 
 .center .content h1{
  font-family: cursive;
- color: green;
+ color: var(--primary-color);
  text-align: center;
  text-transform: capitalize;
 }
@@ -104,18 +106,20 @@
   font-family: cursive;
 }
 .content button{
-  margin: 10rem 0 0 2rem;
-  padding: .4rem 1rem;
+  margin: 16rem 0 0 2rem;
+  padding: .4rem 1.5rem;
   border-radius: 10px;
   border: none;
-  background-color: orangered;
+  background-color: var(--btn-primary-bg);
   font-size: 1rem;
   font-weight: 700;
   color: white;
   text-transform: capitalize;
+  transition: 0.3s ease-in-out;
 }
 .center button:hover{
   transform: scale(1.1) ;
+  background-color: var(--btn-primary-hover);
 }
 
 
@@ -128,20 +132,21 @@
 
 .rightup {
   grid-area: rightup;
-  background: #fdd;
   background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/OIP.webp");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 3px;
-  box-shadow: 0px 0px 10px 5px rgb(206, 13, 132);
+  box-shadow: 0px 0px 2px  var(--card-border);
   cursor: pointer;
 }
 .rightup:hover{
   transform: scale(1.1) ;
+  border-radius: 20px;
 }
 .rightdown:hover{
   transform: scale(1.1) ;
+  border-radius: 20px;
 }
 .rightdown {
   background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/frag.avif");
@@ -149,19 +154,19 @@
   background-position: top;
   grid-area: rightdown;
   border-radius: 3px;
-  box-shadow: 0px 0px 10px 5px rgb(164, 209, 235);
+  box-shadow: 0px 0px 2px  var(--card-border);
   cursor: pointer;
 }
 
 .rightup h3{
   text-align: center;
-  color: rgb(230, 59, 88);
+  color: var(--primary-color);
   text-transform: capitalize;
 }
 .rightup p{
   width: 100%;
-  color: yellow ;
-  text-shadow: 2px 2px green;
+  color: var(--accent-color) ;
+  text-shadow: 2px 2px var(--secondry-color);
   text-transform: capitalize;
   font-weight: 500;
   text-align: center;
@@ -171,21 +176,25 @@
   margin-top: 5rem;
   padding: 5px;
   font-weight: 500;
-
 }
 
+button{
+  border-radius: 5px ;
+  border: none;
+
+}
 
 
 
 .rightdown h3{
   text-align: center;
-  color: rgb(230, 59, 88);
+  color: var(--primary-color);
   text-transform: capitalize;
 }
 .rightdown   p{
   width: 100%;
-  color: yellow ;
-  text-shadow: 2px 2px green;
+  color: var(--accent-color) ;
+  text-shadow: 2px 2px var(--secondry-color);
   text-transform: capitalize;
   font-weight: 500;
   text-align: center;
@@ -204,10 +213,10 @@
 
 .bottom {
   grid-area: bottom;
-  background: #ffd;
+  background: var(--bg-color);
   border-radius: 3px;
-  box-shadow: 0px 0px 10px 5px rgb(221, 190, 16);
-  display: flex;
+  box-shadow: 0px 0px 2px  var(--card-border); 
+   display: flex;
   align-items: center;
   justify-content: space-between;
 }
@@ -216,7 +225,7 @@
   align-items: center;
   width: 19.2%;
   justify-content: center;
-  border-right: 1px solid grey;
+  border-right: 1px solid var(--card-border);
 }
 .bottom .delivery:last-of-type{
   border: none;
@@ -224,9 +233,10 @@
 .delivery .icon{
   font-size: 32px;
   margin: 0 5px;
-  color: rgb(175, 175, 175);
+  color: var(--secondry-color);
 }
 .dcontent p:first-of-type{
+  color: var(--secondry-color);
   font-size:  1rem;
   text-transform: capitalize;
   font-weight: 500;

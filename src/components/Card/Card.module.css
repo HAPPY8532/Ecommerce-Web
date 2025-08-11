@@ -1,0 +1,49 @@
+.boxes{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.card{
+    width: 28.5%;
+    height: 40vh;
+    border: 1px solid var(--card-border);
+    border-radius: 10px;
+}
+.card h3 span{
+    color: black;
+    font-size: 3rem;
+    font-weight: 400;
+    font-family: cursive;
+}
+.card h3{
+    color: var(--accent-color);
+    margin: 9rem 0 0 1rem; 
+    font-size: 1.5em;
+    text-transform: capitalize;
+    font-family:"Caveat", cursive;
+    font-weight: 900;
+}
+.card button{
+    margin: 5px 100px;
+    padding: 1%;
+    width: 30%;
+    font-size: medium;
+    font-weight: 500;
+}
+.box1{
+    background-image: url("E:\ecommerce-react\neo-mart\src\assets\images\shoes.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box2{
+    background-image: url("E:\ecommerce-react\neo-mart\src\assets\images\forwomen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.box3{
+    background-image: url("E:\ecommerce-react\neo-mart\src\assets\images\formen.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}

@@ -1,20 +1,76 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Yellowtail&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: italic;
 }
+.deal{
+  font-family: "Caveat", cursive;;
+}
+
+
 :root {
-  --bg-color: #F9FAFB;
-  --primary-color: #1E40AF;
-  --secondary-color: #60A5FA;
-  --accent-color: #84CC16;
-  --text-color: #1F2937;
-  --card-bg: #FFFFFF;
-  --error-color: #EF4444;
+  /* === Base Colors === */
+  --primary-color: #007BFF;            /* Brand color - main buttons, links, highlights */
+  --secondary-color: #2C2C2C;          /* Secondary elements - text, headings, icons */
+  --accent-color: #FFC107;             /* Accent color - warnings, highlights, badges */
+
+  --bg-color: #F9F9F9;                 /* Overall page background */
+  --text-dark: #1A1A1A;                /* Primary text color */
+  --text-light: #FFFFFF;               /* Light text - used on dark or primary backgrounds */
+
+  /* === Navbar === */
+  --navbar-bg: #FFFFFF;                /* Navbar background color */
+  --navbar-text: #2C2C2C;              /* Navbar text and icon color */
+
+  /* === Sidebar === */
+  --sidebar-bg: #EFEFEF;               /* Sidebar background */
+  --sidebar-text: #333333;             /* Sidebar text color */
+
+  /* === Cards === */
+  --card-bg: #FFFFFF;                  /* Product or content card background */
+  --card-border: #E0E0E0;              /* Card border color */
+  --image-container-bg: #F0F0F0;
+
+  /* === Buttons === */
+  --btn-primary-bg: #007BFF;           /* Main action buttons like "Add to Cart", "Buy Now" */
+  --btn-primary-hover: #0056b3;        /* Hover state for primary buttons */
+  --btn-secondary-bg: #6C757D;         /* Secondary buttons - less important actions */
+  --btn-secondary-hover: #5A6268;      /* Hover state for secondary buttons */
+  --btn-success-bg: #28A745;           /* Success actions - e.g., "Order Placed" */
+  --btn-success-hover: #218838;        /* Hover state for success buttons */
+  --btn-danger-bg: #DC3545;            /* Destructive actions - e.g., "Remove from cart" */
+  --btn-danger-hover: #C82333;         /* Hover state for danger buttons */
+  --btn-disabled-bg: #CCCCCC;          /* Disabled button background */
+  --btn-disabled-text: #666666;        /* Disabled button text color */
+
+  /* === Alerts === */
+  --alert-success-bg: #D4EDDA;         /* Success alert background - e.g., "Order confirmed" */
+  --alert-success-text: #155724;       /* Success alert text */
+  --alert-success-border: #C3E6CB;     /* Success alert border */
+
+  --alert-warning-bg: #FFF3CD;         /* Warning alert background - e.g., "Low stock" */
+  --alert-warning-text: #856404;       /* Warning alert text */
+  --alert-warning-border: #FFEEBA;     /* Warning alert border */
+
+  --alert-error-bg: #F8D7DA;           /* Error alert background - e.g., "Payment failed" */
+  --alert-error-text: #721C24;         /* Error alert text */
+  --alert-error-border: #F5C6CB;       /* Error alert border */
+
+  --alert-info-bg: #D1ECF1;            /* Info alert background - e.g., "New feature available" */
+  --alert-info-text: #0C5460;          /* Info alert text */
+  --alert-info-border: #BEE5EB;        /* Info alert border */
+
+  /* === Stock Status === */
+  --stock-in: #28A745;                 /* "In Stock" text or badge */
+  --stock-low: #FFC107;                /* "Low Stock" warning badge */
+  --stock-out: #DC3545;                /* "Out of Stock" alert or text */
 }
+
 
 
 body {
@@ -26,12 +82,15 @@ body {
 button.primary {
   background-color: var(--primary-color);
   color: white;
+  transition: 0.3s ease-in-out;
+}
+.primary:hover{
+  background-color: var(--btn-primary-hover);
 }
 
 .container{
   width: 85%;
   margin: 0px auto;
-  /* border: 1px solid red; */
 }
 
 
