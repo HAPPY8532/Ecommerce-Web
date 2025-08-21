@@ -4,7 +4,7 @@ import Layout from "../../components/Layout/Layout";
 import axios from "axios";
 import style from "./Product.module.css";
 import { useDispatch } from "react-redux";
-import { addToCart } from "../../cartfolder/cartSlice";
+import { addToCart } from "../../cartfolder/temp";
 import { toast } from "react-toastify";
 
 function Product() {
