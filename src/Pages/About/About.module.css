@@ -1,3 +1,128 @@
-.about{
-    margin-top: 20vh;
+.aboutUs {
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #ffffff;
+  margin-top: 10vh;
+}
+
+/* === Hero Section === */
+.heroSection {
+background: linear-gradient(to bottom, #e0e0e0, #ffffff);
+  text-align: center;
+  padding: 60px 20px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  box-shadow: 0px 0px 5px gray;
+  color: var(--primary-color);
+}
+.heroSection span{
+    color: var(--accent-color);
+}
+
+.heroSection h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.heroSection p {
+  font-size: 1.1rem;
+  color: #555;
+  color: var(--accent-color);
+}
+
+/* === General Section Styling === */
+.ourStory,
+.missionVision,
+.whatWeOffer,
+.whyChooseUs,
+.ctaSection,
+.contactInfo {
+  margin-bottom: 50px;
+}
+
+.ourStory h2,
+.missionVision h2,
+.whatWeOffer h2,
+.whyChooseUs h2,
+.ctaSection h2,
+.contactInfo h3 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+  text-transform: uppercase;
+  color: var(--accent-color);
+}
+
+.ourStory p,
+.missionVision p,
+.whatWeOffer li,
+.whyChooseUs li {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+/* === Lists === */
+ul{
+  margin-left: 5rem;
+  list-style: none;
+  text-decoration: none;
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+ul li{
+  margin-bottom: 6px;
+  text-decoration: none;
+  list-style: none;
+  width: 29%;
+  text-align: left;
+}
+
+/* === CTA Button === */
+.ctaSection {
+  text-align: center;
+}
+
+.ctaSection button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.ctaSection button:hover {
+  background-color: #0056b3;
+}
+
+/* === Contact Info === */
+.contactInfo {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.contactInfo p {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #444;
+}
+
+.socialLinks a {
+  color: #007bff;
+  text-decoration: none;
+  margin-right: 12px;
+  font-weight: 500;
+}
+
+.socialLinks a:hover {
+  text-decoration: underline;
 }

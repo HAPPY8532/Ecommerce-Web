@@ -1,3 +1,10 @@
+
 .blog{
-    margin-top: 20vh;
+    width: 100%;
+    margin: 12vh 0;
+}
+.blog img{
+    width: 60%;
+    margin: 0 0 0 40vh;
+    border-radius: 10px;
 }

@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 
+
 import Layout from "../../components/Layout/Layout";
 
-import background from "../../assets/images/background.jpg"; // if used later
-import Category from "../../components/category/Category";
+// import background from "../../assets/images/background.jpg"; // if used later
+// import Category from "../../components/category/Category";
 import { TbTruckDelivery, TbTruckReturn } from "react-icons/tb";
 import { MdOutlineSavings, MdOutlinePayments } from "react-icons/md";
 import { BiSupport } from "react-icons/bi";
@@ -14,6 +15,7 @@ import {  useNavigate } from "react-router-dom";
 import Card from "../../components/Card/Card";
 import BestDeal from "../../components/Bestdeal/BestDeal";
 import Blog from "../../components/Blog/Blog";
+// import Login from "../../components/Login/Login";
 function Home() {
   const [category, setCategory] = useState([]);
   const navigate = useNavigate();
@@ -37,7 +39,12 @@ function Home() {
 
   return (
     <Layout>
+
       <div className={style.main}>
+        {/* <div className={style.login}>
+          <Login/>
+        </div> */}
+        
         <div className="container">
           <div className={style.hero}>
             {/* Left: Categories */}

@@ -3,6 +3,19 @@
   height: auto;
   margin-top: 10vh;
   padding-bottom: 5rem;
+  position: relative;
+}
+
+.login {
+  width: 25%;
+  height: 60vh;
+  top:40vh;
+  right: 0;
+  border-radius: 10px;
+  position: fixed;
+  z-index: 99;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 .hero {
@@ -22,10 +35,12 @@
 
   grid-area: left;
   background: #f2f2f2;
-  box-shadow: 0px 0px 2px  var(--card-border);
-    border-radius: 3px;
-  max-height: calc(200px + 200px); /* or 570px */
-  overflow-y: hidden; /* ❌ Hide by default */
+  box-shadow: 0px 0px 2px var(--card-border);
+  border-radius: 3px;
+  max-height: calc(200px + 200px);
+  /* or 570px */
+  overflow-y: hidden;
+  /* ❌ Hide by default */
   padding: 5px;
   position: relative;
 }
@@ -86,7 +101,7 @@
   background: #d0f0c0;
   background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/b1.jpg");
   border-radius: 3px;
-  box-shadow: 0px 0px 2px  var(--card-border);
+  box-shadow: 0px 0px 2px var(--card-border);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
@@ -94,18 +109,20 @@
 }
 
 
-.center .content h1{
- font-family: cursive;
- color: var(--primary-color);
- text-align: center;
- text-transform: capitalize;
+.center .content h1 {
+  font-family: cursive;
+  color: var(--primary-color);
+  text-align: center;
+  text-transform: capitalize;
 }
-.content p{
+
+.content p {
   text-align: center;
   text-transform: capitalize;
   font-family: cursive;
 }
-.content button{
+
+.content button {
   margin: 16rem 0 0 2rem;
   padding: .4rem 1.5rem;
   border-radius: 10px;
@@ -117,13 +134,14 @@
   text-transform: capitalize;
   transition: 0.3s ease-in-out;
 }
-.center button:hover{
-  transform: scale(1.1) ;
+
+.center button:hover {
+  transform: scale(1.1);
   background-color: var(--btn-primary-hover);
 }
 
 
-.rcontent{
+.rcontent {
   margin: 0 auto;
   width: 70%;
   text-align: center;
@@ -137,71 +155,78 @@
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 3px;
-  box-shadow: 0px 0px 2px  var(--card-border);
+  box-shadow: 0px 0px 2px var(--card-border);
   cursor: pointer;
 }
-.rightup:hover{
-  transform: scale(1.1) ;
+
+.rightup:hover {
+  transform: scale(1.1);
   border-radius: 20px;
 }
-.rightdown:hover{
-  transform: scale(1.1) ;
+
+.rightdown:hover {
+  transform: scale(1.1);
   border-radius: 20px;
 }
+
 .rightdown {
   background-image: url("E:/ecommerce-react/neo-mart/src/assets/images/frag.avif");
   background-size: 65%;
   background-position: top;
   grid-area: rightdown;
   border-radius: 3px;
-  box-shadow: 0px 0px 2px  var(--card-border);
+  box-shadow: 0px 0px 2px var(--card-border);
   cursor: pointer;
 }
 
-.rightup h3{
+.rightup h3 {
   text-align: center;
   color: var(--primary-color);
   text-transform: capitalize;
 }
-.rightup p{
+
+.rightup p {
   width: 100%;
-  color: var(--accent-color) ;
+  color: var(--accent-color);
   text-shadow: 2px 2px var(--secondry-color);
   text-transform: capitalize;
   font-weight: 500;
   text-align: center;
   margin: 0 auto;
 }
-.rightup button{
+
+.rightup button {
   margin-top: 5rem;
   padding: 5px;
   font-weight: 500;
 }
 
-button{
-  border-radius: 5px ;
+button {
+  border-radius: 5px;
   border: none;
 
 }
 
 
 
-.rightdown h3{
+.rightdown h3 {
   text-align: center;
   color: var(--primary-color);
   text-transform: capitalize;
 }
-.rightdown   p{
+
+.rightdown p {
   width: 100%;
-  color: var(--accent-color) ;
+  color: var(--accent-color);
   text-shadow: 2px 2px var(--secondry-color);
   text-transform: capitalize;
   font-weight: 500;
   text-align: center;
   margin: 0 auto;
 }
-.rightdown button{
- margin-top: 4.9rem;
+
+.rightdown button {
+  margin-top: 4.9rem;
   padding: 5px;
   font-weight: 500;
 }
@@ -215,34 +240,39 @@ button{
   grid-area: bottom;
   background: var(--bg-color);
   border-radius: 3px;
-  box-shadow: 0px 0px 2px  var(--card-border); 
-   display: flex;
+  box-shadow: 0px 0px 2px var(--card-border);
+  display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.bottom .delivery{
+
+.bottom .delivery {
   display: flex;
   align-items: center;
   width: 19.2%;
   justify-content: center;
   border-right: 1px solid var(--card-border);
 }
-.bottom .delivery:last-of-type{
+
+.bottom .delivery:last-of-type {
   border: none;
 }
-.delivery .icon{
+
+.delivery .icon {
   font-size: 32px;
   margin: 0 5px;
   color: var(--secondry-color);
 }
-.dcontent p:first-of-type{
+
+.dcontent p:first-of-type {
   color: var(--secondry-color);
-  font-size:  1rem;
+  font-size: 1rem;
   text-transform: capitalize;
   font-weight: 500;
 }
-.dcontent p:last-of-type{
+
+.dcontent p:last-of-type {
   font-size: .8rem;
-   color: rgb(175, 175, 175);
+  color: rgb(175, 175, 175);
   text-transform: capitalize;
 }

@@ -7,8 +7,9 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Product from './Pages/Product/Product'
 import ProductDetail from './Pages/ProductDetails/ProductDetail'
 import About from './Pages/About/About'
-import Blog from './Pages/Blog/Blog'
+import BlogPage from './Pages/Blog/BlogPage'
 import Contact from './Pages/Contact/Contact'
+import Shop from './Pages/Shop/Shop'
 
 function App() {
   return (
@@ -19,11 +20,13 @@ function App() {
       <Routes>
       <Route path='/' element={<Home/>}/>
       <Route path='/about' element={<About/>}/>
-      <Route path='/blog' element={<Blog/>}/>
+      <Route path='/shop' element={<Shop/>}/>
+      <Route path='/blog' element={<BlogPage/>}/>
       <Route path='/contact' element={<Contact/>}/>
       <Route path='/cart' element={<Cart/>}/>
       <Route path='/product/:category' element={<Product/>}/>
       <Route path='/productdetail/:id' element={<ProductDetail/>}/>
+      <Route path="/blogpage/:id" element={<BlogPage />} />
       </Routes>
       </BrowserRouter>
       </div> 
