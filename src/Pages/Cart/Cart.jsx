@@ -5,7 +5,7 @@ import {
   removeFromCart,
   incrementQuantity,
   decrementQuantity,
-} from "../../cartfolder/cartSlice";
+}  from "../../cartfolder/cartSlice.js";
 import style from './Cart.module.css';
 import Layout from "../../components/Layout/Layout";
 
