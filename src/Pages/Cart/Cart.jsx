@@ -5,8 +5,8 @@ import {
   removeFromCart,
   incrementQuantity,
   decrementQuantity,
-}  from "../../cartfolder/cartSlice.js";
-import style from './Cart.module.css';
+} from "../../cartfolder/temp";
+import style from "./Cart.module.css";
 import Layout from "../../components/Layout/Layout";
 
 const Cart = () => {
@@ -14,7 +14,10 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.items);
 
   const totalPrice = useMemo(() => {
-    return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
+    return cartItems.reduce(
+      (total, item) => total + item.price * item.quantity,
+      0
+    );
   }, [cartItems]);
 
   if (cartItems.length === 0) {
